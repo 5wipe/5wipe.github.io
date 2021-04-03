@@ -1,2 +1,341 @@
 @charset "UTF-8";
+
+@charset "UTF-8";
 /* CSS Document */
+
+/*
+=======================================
+	Reset CSS
+=======================================
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, main, menu, nav, section, summary,
+time, mark, audio, video{
+	margin:0;
+	padding:0;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,main,menu,nav,section{
+	display:block;
+}
+
+html{
+	-webkit-text-size-adjust: 100%;
+}
+
+body{
+	background:#fff;
+	color: #111111;
+	line-height: 1.5;
+	font-size: 14px;
+	font-family:'Lato', sans-serif;
+}
+
+img{
+	border: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+ul,ol{
+	list-style-type: none;
+}
+
+table {
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+
+img, input, select, textarea { 
+	vertical-align: middle;
+}
+
+a{
+	color: #111111;
+	transition: 0.5s;
+}
+a:hover{
+	color: #E5E5E5;
+}
+
+a:hover img{
+	opacity: 0.7;
+}
+
+
+/*icon-fonts*/
+
+
+
+/*
+=========================================
+	Base Layout
+=========================================
+*/
+/*ALL and Smart Phone*/
+.all-wrap {
+	animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+.container{
+	max-width: 940px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+.container:after{
+	content:"";
+	display: block;
+	clear:both;
+}
+
+/*
+=========================================
+	Modules（Block）
+=========================================
+*/
+
+/*header
+--------------------*/
+
+
+
+/*global navigation
+--------------------*/
+header  {
+  padding-top:5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  transition: .3s;
+  background-color: rgba(255,255,255,0.9);
+  height: 50px;
+}
+
+.is-fixed  {
+  position:  fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  -webkit-transition: all .4s ease 0s,background .6s ease .2s;
+  transition: all .4s ease 0s,background .6s ease .2s;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  height: 100px;
+}
+
+
+#gnav li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+#gnav a{
+	display:block;
+	padding:10px 0;
+	color: #000000;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: 'Lato', serif;
+}
+#gnav a:hover{
+	color: #E5E5E5;
+	transition:0.5s;
+}
+
+
+@media screen and (min-width: 640px){
+	#gnav{
+		padding-bottom: 20px;
+	}
+}
+
+
+/*main
+--------------------*/
+
+#logo{
+	background-color:#fff;
+	width:100%;
+	padding:330px 0 300px 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+}
+
+
+#logo h1,h2{
+	text-align:center;
+}
+
+#logo h1{
+	background-color: #ffffff;
+	font-size:32px;
+	}
+
+#logo h2 {
+	padding-top: 2px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color: #aaaaaa;
+	}
+
+
+/*Works
+--------------------*/
+#wrap{
+	background:#fff;
+	padding:20% 10% 0 10%;
+}
+
+#wrap li{
+	margin-bottom:20px;
+}
+
+.works-type{
+	color:#aaa;
+	text-align:left;
+}
+
+.works-name{
+	text-align:right;
+}
+
+
+@media screen and (min-width: 640px){
+	
+	#works{
+		overflow: hidden;
+	}
+	#works li{
+		float: left;
+		width: 30.851%;
+		margin-right: 3.7234%;
+	}
+	#works li:nth-child(3n){
+		margin-right: 0;
+	}
+}
+
+
+
+
+/*concept
+--------------------*/
+#concept{
+	padding:50px 0 50px 0;
+	background:#fff;
+	text-align:center;
+	line-height:2em;
+	display:none;
+}
+
+
+
+
+
+/*footer (about)
+--------------------*/
+#footer{
+	padding:100px 10px 20px 10px;
+	background:#f8f8f8;
+}
+
+.face-photo{
+	width:43.333%;
+	margin:0 auto 20px;
+}
+
+
+.name{
+	font-size:1.3em;
+	text-align:center;
+	padding:8px 0;
+}
+
+#footer p{
+	font-size:0.9em;
+	text-align:center;
+}
+
+
+@media screen and (min-width:640px){
+		.face-photo{
+		width:20%;
+		margin-bottom:30px;
+	}
+	
+	.info{
+		width:100%;
+		padding-top:30px;
+		text-align:center;
+	}
+
+}
+
+/*footer (about2)
+--------------------*/
+#about2{
+	padding-top:150px;
+}
+
+.face-photo2{
+	width:43.333%;
+	margin:0 auto 20px;
+}
+
+.name2{
+	font-size:1.3em;
+	text-align:center;
+	padding:8px 0;
+}
+
+#about2 p{
+	font-size:0.9em;
+	text-align:center;
+}
+
+@media screen and (min-width:640px){
+		.face-photo2{
+		width:20%;
+		margin-bottom:30px;
+	}
+	
+	.info2{
+		width:100%;
+		padding-top:30px;
+		text-align:center;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
