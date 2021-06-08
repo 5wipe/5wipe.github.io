@@ -144,6 +144,12 @@ u-
 	}
 }
 
+@media screen and (max-width: 375px) {
+  .u-wrapper {
+    width: 80%;
+  }
+}
+
 /* =====================
 header
 ===================== */
@@ -336,8 +342,6 @@ header
 	.opened li{
 		margin-right: 168px;
 	}
-
-	
 }
 
 @media screen and (max-width: 375px) {
@@ -346,65 +350,27 @@ header
 	}
 }
 
-/* =====================
-mv
-===================== */
-.mv {
-	width: 100%;
-	height: 730px;
-	position: relative;
-}
 
-.mv__title {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.mv h1 {
-	font-size: 5.5rem;
-	display: none;
+/* ==================================
+gallery.html
+==================================== */
+.gallery--heading {
+  margin-top: 80px;
 }
 
 
-
-@media screen and (max-width: 768px) {
-	.mv {
-		height: 100vh;
-		margin-bottom: 100px;
-	}
-	
-}
-
-@media screen and (max-width: 375px) {
-	.mv {
-		height: 730px;
-		margin-bottom: 70px;
-	}
-}
-
-
-/* =====================
-gallery
-===================== */
-.gallery--wrapper {
-	width: 75%;
-}
-
-.gallery--flex {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+.gallery--grid {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 80px;
 }
 
 .gallery__item {
   position: relative;
   overflow: hidden;
-  margin: 10px 2%;
-  max-width: 450px;
-  max-height: 360px;
-  width: 48%;
   cursor: pointer;
 }
 
@@ -423,46 +389,8 @@ gallery
 .gallery__item--img {
   position: relative;
   display: block;
-  max-width: 100%;
   opacity: 0.8;
 }
-
-.gallery__pageLink {
-	margin-top: 5%;
-	margin-right: 1%;
-	text-align: right;
-}
-
-.gallery__pageLink a {
-	position: relative;
-	color: #333;
-	font-size: 2.2rem;
-	text-decoration: none;
-	padding-right: 50px;
-}
-
-.gallery__pageLink span::before {
-	content: '';
-	position: absolute;
-	top: calc(50% - 4px);
-	right: 0;
-	transform: rotate(30deg);
-	width: 12px;
-	height: 1px;
-	background-color: #333;
-}
-
-.gallery__pageLink span::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%);
-	width: 40px;
-	height: 1px;
-	background-color: #333;
-}
-
 
 /* ---gray-effect--- */
 .effect-gray img {
@@ -488,12 +416,14 @@ gallery
   filter: grayscale(0);
 }
 
-
-
 @media screen and (max-width: 768px) {
-	.gallery--flex {
-		flex-direction: column;
-		align-items: center;
+  .gallery--heading {
+    margin-top: 10px;
+  }
+
+	.gallery--grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
 	}	
 	
 	.gallery__item {
@@ -514,131 +444,13 @@ gallery
 	}
 }
 
-
-/* =====================
-about
-===================== */
-
-.about--content {
-	width: 52%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.about__photo {
-	width: 100%;
-	height: 250px;
-	margin-bottom: 40px;
-	position: relative;
-}
-
-.about__profile {
-	width: 60%;
-}
-
-.profile__name {
-	font-size: 2.8rem;
-}
-
-.profile__birth, 
-.profile__desc {
-	font-family: sans-serif;
-	letter-spacing: 1px;
-}
-
-.profile__birth {
-	color: #6e6e6e;
-	font-size: 1.2rem;
-	margin: 10px 0 20px;
-}
-
-.profile__desc {
-	font-size: 1.4rem;
-}
-
-.profile__desc > p {
-	margin-bottom: 8px;
-}
-
-
-@media screen and (max-width: 768px) {
-	.about--content {
-		width: 80%;
-	}
-	
-	.about__photo {
-		width: 110%;
-		margin-bottom: 20px;
-	}
-	
-	.about__profile {
-		width: 80%;
-	}
-	
-	.profile__name {
-		font-size: 2.5rem;
-	}
-	
-	.profile__birth {
-		font-size: 0.9rem;
-	}
-	
-	.profile__desc {
-		font-size: 1.2rem;
-	}
-
-}
-
 @media screen and (max-width: 375px) {
-	.about__photo {
-		width: 120%;
-	}
-
-	.about__profile {
-		width: 90%;
-	}
+  .gallery--grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+	}	
 }
 
-/* =====================
-contact
-===================== */
-.contact__table {
-	width: 30%;
-	margin: 0 auto;
-}
-
-.contact__table tr {
-	border-bottom: 1px dotted #ccc;
-}
-
-.contact__table tr:nth-child(1) {
-	border-top: 1px dotted #ccc;
-}
-
-.contact__table th {
-	font-size: 1.5rem;
-	padding: 10px 30px;
-}
-
-.contact__table td {
-	font-size: 1.8rem;
-}
-
-@media screen and (max-width: 768px) {
-	.contact__table {
-		width: 60%;
-	}
-	
-	.contact__table th {
-		font-size: 1.3rem;
-	}
-	
-	.contact__table td {
-		font-size: 1.5rem;
-	}
-}
 
 /* =====================
 footer
@@ -653,8 +465,6 @@ footer
 	text-align: center;
 }
 
-
-
 @media screen and (max-width: 768px) {
 	.footer{
 		margin-top: 150px;
@@ -665,8 +475,3 @@ footer
 	}
 
 }
-
-
-
-
-
