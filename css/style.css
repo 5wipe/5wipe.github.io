@@ -106,6 +106,16 @@ u-
 	margin-top: 10px;
 }
 
+/* fadein */
+.all-wrapper {
+	animation: fadein 2s forwards;
+}
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+
 /* link Effect */
 
 .linkEffect a::after {
