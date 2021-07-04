@@ -84,14 +84,14 @@ u-
 }
 
 .u-category {
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	text-align: center;
 	color:#c6c6c6;
 	margin-bottom: 10px;
 }
 
 .u-heading {
-	font-size: 4rem;
+	font-size: 2rem;
 	text-align: center;
 	position: relative;
 	margin-bottom: 60px;
@@ -111,10 +111,20 @@ u-
 
 @media screen and (min-width: 600px) {
 	.u-heading {
+		font-size: 3rem;
 		margin-bottom: 80px;
 	}
 }
 
+@media screen and (min-width: 1025px) {
+	.u-category {
+		font-size: 1.6rem;
+	}
+
+	.u-heading {
+		font-size: 6rem;
+	}
+}
 
 /* fadein */
 .all-wrapper {
