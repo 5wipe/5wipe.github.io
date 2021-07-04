@@ -107,7 +107,7 @@ u-
 	margin-top: 10px;
 }
 
-@media screen and (min-width: 759px) {
+@media screen and (min-width: 600px) {
 	.u-heading {
 		margin-bottom: 80px;
 	}
@@ -369,9 +369,10 @@ header
 mv
 ===================== */
 .mv {
-	width: 100%;
-	height: 730px;
+	width: 100vw;
+	height: 600px;
 	position: relative;
+	margin-bottom: 70px;
 }
 
 .mv__title {
@@ -388,7 +389,7 @@ mv
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 600px) {
 	.mv {
 		height: 100vh;
 		margin-bottom: 100px;
@@ -396,53 +397,46 @@ mv
 	
 }
 
-@media screen and (max-width: 375px) {
-	.mv {
-		height: 730px;
-		margin-bottom: 70px;
-	}
-}
-
 
 /* =====================
 gallery
 ===================== */
 .gallery--wrapper {
-	width: 75%;
+	width: 90vw;
 }
 
 .gallery--flex {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
+	flex-direction: column;
+	align-items: center;
 }
 
 .gallery__item {
   position: relative;
   overflow: hidden;
-  margin: 10px 2%;
+  margin: 10px 2% 30px;
+	width: 100%;
   max-width: 450px;
   max-height: 360px;
-  width: 48%;
   cursor: pointer;
 }
 
 .gallery__item--category {
 	text-align: left;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	margin-bottom: 8px;
 }
 
 .gallery__item--title{
 	text-align: right;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	margin-top: 8px;
 }
 
 .gallery__item--img {
   position: relative;
   display: block;
-  max-width: 100%;
   opacity: 0.8;
 }
 
@@ -455,7 +449,7 @@ gallery
 .gallery__pageLink a {
 	position: relative;
 	color: #333;
-	font-size: 2.2rem;
+	font-size: 1.9rem;
 	text-decoration: none;
 	padding-right: 50px;
 }
@@ -510,29 +504,27 @@ gallery
 
 /* モーダルCSS */
 
-
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 600px) {
 	.gallery--flex {
-		flex-direction: column;
-		align-items: center;
-	}	
-	
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
 	.gallery__item {
-		width: 100%;
-		margin-bottom: 30px;
+		width: 100vw;
+		margin-bottom: 10px;
 	}
 
 	.gallery__item--category {
-		font-size: 1.3rem;
+		font-size: 1.6rem;
 	}
 	
 	.gallery__item--title{
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 	}
 
 	.gallery__pageLink a {
-		font-size: 1.9rem;
+		font-size: 2.2rem;
 	}
 }
 
@@ -542,7 +534,7 @@ about
 ===================== */
 
 .about--content {
-	width: 52%;
+	width: 80%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -550,18 +542,18 @@ about
 }
 
 .about__photo {
-	width: 100%;
+	width: 120%;
 	height: 250px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	position: relative;
 }
 
 .about__profile {
-	width: 60%;
+	width: 90%;
 }
 
 .profile__name {
-	font-size: 2.8rem;
+	font-size: 2.5rem;
 }
 
 .profile__birth, 
@@ -572,12 +564,12 @@ about
 
 .profile__birth {
 	color: #6e6e6e;
-	font-size: 1.2rem;
+	font-size: 0.9rem;
 	margin: 10px 0 20px;
 }
 
 .profile__desc {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 
 .profile__desc > p {
@@ -585,41 +577,34 @@ about
 }
 
 
-@media screen and (max-width: 768px) {
-	.about--content {
-		width: 80%;
-	}
+@media screen and (min-width: 600px) {
 	
 	.about__photo {
 		width: 110%;
-		margin-bottom: 20px;
-	}
-	
-	.about__profile {
-		width: 80%;
 	}
 	
 	.profile__name {
-		font-size: 2.5rem;
+		font-size: 2.8rem;
 	}
 	
 	.profile__birth {
-		font-size: 0.9rem;
+		font-size: 1.2rem;
 	}
 	
 	.profile__desc {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 1025px) {
 	.about__photo {
 		width: 120%;
+		margin-bottom: 40px;
 	}
 
 	.about__profile {
-		width: 90%;
+		width: 60%;
 	}
 }
 
@@ -627,7 +612,7 @@ about
 contact
 ===================== */
 .contact__table {
-	width: 30%;
+	width: 60%;
 	margin: 0 auto;
 }
 
@@ -640,25 +625,25 @@ contact
 }
 
 .contact__table th {
-	font-size: 1.5rem;
-	padding: 10px 30px;
+	font-size: 1.3rem;
+	padding: 10px;
 }
 
 .contact__table td {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 600px) {
 	.contact__table {
-		width: 60%;
+		width: 30%;
 	}
 	
 	.contact__table th {
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 	}
 	
 	.contact__table td {
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 	}
 }
 
@@ -666,7 +651,7 @@ contact
 footer
 ===================== */
 .footer {
-	width: 100%;
+	width: 100vw;
 	margin-top: 150px;
 }
 
@@ -676,7 +661,7 @@ footer
 }
 
 
-@media screen and (min-width: 759px) {
+@media screen and (min-width: 600px) {
 	.footer div {
 		padding: 20px 0;
 	}
