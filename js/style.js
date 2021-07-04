@@ -14,4 +14,13 @@ $(document).ready(function() {
     $('.open').removeClass('opened');
     event.stopPropagation();
   });
-})
+});
+
+$(function () {
+  $('#openModal').click(function(){
+      $('#modalArea').fadeIn();
+  });
+  $('#closeModal , #modalBg').click(function(){
+    $('#modalArea').fadeOut();
+  });
+});
