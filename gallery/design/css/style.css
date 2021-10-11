@@ -388,7 +388,9 @@ mv
 .mv_img {
 	width: 80vw;
 	margin: 0 auto;
+	box-shadow: 0 0 10px #ccc;
 }
+
 
 
 
@@ -476,7 +478,7 @@ footer
 }
 
 .footer div {
-	padding: 10px 0;
+	padding: 10px 0 20px;
 	text-align: center;
 }
 

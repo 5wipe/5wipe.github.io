@@ -477,7 +477,9 @@ gallery
 }
 
 
-/* ---gray-effect--- */
+@media screen and (min-width: 600px) {
+
+	/* ---gray-effect--- */
 .effect-gray img {
   max-width: none;
   width: -webkit-calc(100% + 20px);
@@ -501,10 +503,6 @@ gallery
   filter: grayscale(0);
 }
 
-
-/* モーダルCSS */
-
-@media screen and (min-width: 600px) {
 	.gallery--flex {
 		flex-direction: row;
 		align-items: flex-start;
@@ -656,7 +654,7 @@ footer
 }
 
 .footer div {
-	padding: 10px 0;
+	padding: 10px 0 20px;
 	text-align: center;
 }
 
