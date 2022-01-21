@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 
 /* CSS Document */
@@ -23,7 +24,7 @@ body{
 	padding: 0;
 	background:#fff;
 	color: #333;
-	font-family: reross-quadratic, sans-serif;
+	font-family: 'Chillax', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
